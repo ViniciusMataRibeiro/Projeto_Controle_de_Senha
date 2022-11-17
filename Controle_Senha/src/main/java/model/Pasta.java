@@ -12,25 +12,22 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Pasta {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	private String nome;
-	
+
 	@ManyToOne
-	@JoinColumn(name="usuario_id", nullable = false)
+	@JoinColumn(name = "usuario_id", nullable = false)
 	private Usuario usuario;
-	
+
 	@OneToMany(mappedBy = "pasta")
 	private Set<Servicos> listServiços;
-	
+
 	@OneToMany(mappedBy = "pasta")
 	private Set<Cartao> listCartao;
 
-	
-	
 	public long getId() {
 		return id;
 	}

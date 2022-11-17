@@ -35,8 +35,6 @@ public class Cartao {
 	@JoinColumn(name = "pasta_id", nullable = false)
 	private Pasta pasta;
 
-	
-	
 	public long getId() {
 		return id;
 	}

@@ -1,4 +1,4 @@
-package app;
+package Projeto_Controle_Senha.app;
 
 import dao.ServicosDao;
 import dao.UsuarioDao;

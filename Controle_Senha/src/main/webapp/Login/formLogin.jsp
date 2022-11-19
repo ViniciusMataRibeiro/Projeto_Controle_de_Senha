@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="utf-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,17 +55,17 @@
 										<h4 class="mt-1 mb-5 pb-1">Nós somos a Equipe RibeiroKey</h4>
 									</div>
 
-									<form action="../ControllerLogin" method="get">
+									<form action="../ControllerCadastroUser" method="get">
 										<p>Por favor, faça login na sua conta</p>
 
 										<div class="form-outline mb-4">
 											<input type="email" id="form2Example11" class="form-control"
-												placeholder="Usuario" name="user"/>
+												placeholder="Usuario" name="user" />
 										</div>
 
 										<div class="form-outline mb-4">
 											<input type="password" id="form2Example22"
-												class="form-control" placeholder="Senha" name="password"/>
+												class="form-control" placeholder="Senha" name="password" />
 										</div>
 
 										<div class="text-center pt-1 mb-5 pb-1">
@@ -76,7 +77,8 @@
 										<div
 											class="d-flex align-items-center justify-content-center pb-4">
 											<p class="mb-0 me-2">Não tem uma conta?</p>
-											<button type="button" class="btn btn-outline-danger">Criar
+											<button type="submit" class="btn btn-outline-danger"
+												href="<%=request.getContextPath()%>/Projeto_Controle_Senha/Usuario/cadastroUsuario.jsp">Criar
 												Conta</button>
 										</div>
 
@@ -86,13 +88,13 @@
 							</div>
 							<div class="col-lg-6 d-flex align-items-center gradient-custom-2">
 								<div class="text-white px-3 py-4 p-md-5 mx-md-4">
-									<h4 class="mb-4">Mova-se com rapidez e segurança com o
+									<h4 class="mb-4">Guarde com rapidez e segurança com o
 										gerenciador de senhas confiável por milhões.</h4>
 									<p class="small mb-0">A maneira mais fácil e segura de
 										gerenciar suas credenciais, senhas, cartões de crédito e
 										outros, sempre protegendo voce e sua familia. Vá em frente,
 										esqueça as senhas: o RibeiroKey memorizará todas elas para
-										você..F.</p>
+										você...</p>
 								</div>
 							</div>
 						</div>

@@ -14,25 +14,27 @@ import model.Usuario;
 @WebServlet({ "/ServletLogin", "/ControllerLogin" })
 public class ServletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public ServletLogin() {
-        super();
-    }
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	public ServletLogin() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String user = request.getParameter("user");
 		String password = request.getParameter("password");
 		UsuarioDao userdao = new UsuarioDao();
-		
+
 		Usuario usuario = userdao.login(user, password);
 		if (usuario != null) {
 			response.sendRedirect("PaginaPrincial.jsp");
-		}else {
+		} else {
 			response.sendRedirect("/Projeto_Controle_Senha/Login/formLogin.jsp");
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doGet(request, response);
 	}
 

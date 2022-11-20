@@ -29,7 +29,7 @@ public class ServletLogin extends HttpServlet {
 		if (usuario != null) {
 			response.sendRedirect("PaginaPrincial.jsp");
 		} else {
-			response.sendRedirect("/Projeto_Controle_Senha/Login/formLogin.jsp");
+			response.sendRedirect("formLogin.jsp");
 		}
 	}
 

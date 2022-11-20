@@ -25,7 +25,7 @@
 									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign
 										up</p>
 
-									<form action="../ControllerCadastroUser" method="post"
+									<form action="ControllerCadastroUser" method="post"
 										class="mx-1 mx-md-4">
 
 										<div class="d-flex flex-row align-items-center mb-4">

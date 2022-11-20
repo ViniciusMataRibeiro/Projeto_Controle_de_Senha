@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="utf-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +55,7 @@
 										<h4 class="mt-1 mb-5 pb-1">Nós somos a Equipe RibeiroKey</h4>
 									</div>
 
-									<form action="../ControllerCadastroUser" method="get">
+									<form action="ControllerLogin" method="get">
 										<p>Por favor, faça login na sua conta</p>
 
 										<div class="form-outline mb-4">
@@ -77,8 +77,7 @@
 										<div
 											class="d-flex align-items-center justify-content-center pb-4">
 											<p class="mb-0 me-2">Não tem uma conta?</p>
-											<button type="submit" class="btn btn-outline-danger"
-												href="<%=request.getContextPath()%>/Projeto_Controle_Senha/Usuario/cadastroUsuario.jsp">Criar
+											<button type="submit" class="btn btn-outline-danger">Criar
 												Conta</button>
 										</div>
 

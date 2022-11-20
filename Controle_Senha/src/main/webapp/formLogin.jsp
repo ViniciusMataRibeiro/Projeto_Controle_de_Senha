@@ -77,9 +77,8 @@
 										<div
 											class="d-flex align-items-center justify-content-center pb-4">
 											<p class="mb-0 me-2">Não tem uma conta?</p>
-											<button type="submit" class="btn btn-outline-danger"
-												href="<%=request.getContextPath()%>/Projeto_Controle_Senha/Usuario/cadastroUsuario.jsp">Criar
-												Conta</button>
+											<a class="btn btn-outline-danger" href="cadastroUsuario.jsp">Criar
+												Conta</a>
 										</div>
 
 									</form>
@@ -103,6 +102,5 @@
 			</div>
 		</div>
 	</section>
-
 </body>
 </html>

@@ -22,8 +22,7 @@
 							<div class="row justify-content-center">
 								<div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign
-										up</p>
+									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Criar Conta</p>
 
 									<form action="ControllerCadastroUser" method="post"
 										class="mx-1 mx-md-4">
@@ -69,18 +68,9 @@
 											</div>
 										</div>
 
-										<div class="form-check d-flex justify-content-center mb-5">
-											<input class="form-check-input me-2" type="checkbox" value=""
-												id="form2Example3c" /> <label class="form-check-label"
-												for="form2Example3"> Eu concordo com todas as
-												declarações em <a href="#!">Termos de serviço</a>
-											</label>
-										</div>
-
 										<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-											<button
-												class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-												type="submit" value="Salvar">Registrar</button>
+											<button type="submit" class="btn btn-outline-danger"
+												value="Salvar">Registrar</button>
 										</div>
 									</form>
 

@@ -77,8 +77,9 @@
 										<div
 											class="d-flex align-items-center justify-content-center pb-4">
 											<p class="mb-0 me-2">Não tem uma conta?</p>
-											<button type="submit" class="btn btn-outline-danger">Criar
-												Conta</button>
+											<a class="btn btn-outline-danger"
+												href="<%=request.getContextPath()%>/cadastroUsuario.jsp">Criar
+												Conta</a>
 										</div>
 
 									</form>

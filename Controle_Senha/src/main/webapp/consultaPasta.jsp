@@ -39,6 +39,7 @@
 											<th>Nome Pasta</th>
 											<th style="text-align: center;">Ação</th>
 										</tr>
+										<a type="button" class="btn btn-outline-success" href="cadastroPasta.jsp">Novo</a>
 									</thead>
 									<tbody>
 										<%
@@ -61,7 +62,7 @@
 											</td>
 											<td style="text-align: center">
 												<a type="button" class="btn btn-outline-info" href="editPasta.jsp?id=<%= obj.getId()%>">Editar</a>
-												<button type="button" class="btn btn-outline-danger">Excluir</button>
+												<a type="button" class="btn btn-outline-danger" href="<%= request.getContextPath()%>/ControllerCadastroPasta?id=<%=obj.getId()%>">Excluir</a>
 											</td>
 										</tr>
 										<%

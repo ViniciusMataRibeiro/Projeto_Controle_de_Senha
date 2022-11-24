@@ -23,7 +23,14 @@ public class ServletCadastroPasta extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		PastaDao dao = new PastaDao();
+		long pastaid = Long.parseLong(request.getParameter("id"));
+		Pasta delpasta = dao.findById(Pasta.class, pastaid).get();
+		
+		dao.delete(delpasta);
+		
+		response.sendRedirect("consultaPasta.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -47,7 +54,7 @@ public class ServletCadastroPasta extends HttpServlet {
 			
 			dao.save(pasta);
 		}
-		response.sendRedirect("PaginaPrincial.jsp");
+		response.sendRedirect("consultaPasta.jsp");
 	}
 
 }

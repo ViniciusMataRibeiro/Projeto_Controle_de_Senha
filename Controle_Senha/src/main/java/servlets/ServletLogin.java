@@ -31,7 +31,7 @@ public class ServletLogin extends HttpServlet {
 			
 			Login.GetLogin(usuario);
 			
-			response.sendRedirect("cadastroPasta.jsp");
+			response.sendRedirect("consultaPasta.jsp");
 		} else {
 			response.sendRedirect("formLogin.jsp");
 		}

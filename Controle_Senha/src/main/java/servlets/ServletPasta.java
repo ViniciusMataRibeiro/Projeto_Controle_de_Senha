@@ -12,12 +12,12 @@ import model.Pasta;
 import model.Usuario;
 import util.Login;
 
-@WebServlet({ "/ServletCadastroPasta", "/ControllerCadastroPasta" })
-public class ServletCadastroPasta extends HttpServlet {
+@WebServlet({ "/ServletPasta", "/ControllerPasta" })
+public class ServletPasta extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 
-	public ServletCadastroPasta() {
+	public ServletPasta() {
 		super();
 	}
 

@@ -48,7 +48,7 @@ public class ServletCadastroUser extends HttpServlet {
 		
 		List<Usuario> a = dao.findAll(Usuario.class);
 		
-		response.sendRedirect("PaginaPrincial.jsp");
+		response.sendRedirect("consultaPagina.jsp");
 	}
 
 }

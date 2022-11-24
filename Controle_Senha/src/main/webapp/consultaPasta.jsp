@@ -48,7 +48,7 @@
 										<tr>
 											<td>
 												<div class="d-flex align-items-center">
-													<img src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+													<img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png"
 														alt="" style="width: 45px; height: 45px"
 														class="rounded-circle" />
 													<div class="ms-3">
@@ -62,7 +62,7 @@
 											</td>
 											<td style="text-align: center">
 												<a type="button" class="btn btn-outline-info" href="editPasta.jsp?id=<%= obj.getId()%>">Editar</a>
-												<a type="button" class="btn btn-outline-danger" href="<%= request.getContextPath()%>/ControllerCadastroPasta?id=<%=obj.getId()%>">Excluir</a>
+												<a type="button" class="btn btn-outline-danger" href="<%= request.getContextPath()%>/ControllerPasta?id=<%=obj.getId()%>">Excluir</a>
 											</td>
 										</tr>
 										<%

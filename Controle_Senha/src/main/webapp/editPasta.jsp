@@ -35,7 +35,7 @@
 									<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Editar
 										Pasta</p>
 
-									<form action="ControllerCadastroPasta" method="post"
+									<form action="ControllerPasta" method="post"
 										class="mx-1 mx-md-4">
 										<input type="hidden" name="pastaid" value="<%=pastaId%>" />
 										<div class="d-flex flex-row align-items-center mb-4">

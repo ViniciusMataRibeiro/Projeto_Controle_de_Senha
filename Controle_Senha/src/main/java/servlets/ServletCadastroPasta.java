@@ -30,15 +30,23 @@ public class ServletCadastroPasta extends HttpServlet {
 			throws ServletException, IOException {
 		Usuario UsuarioLogado = Login.GetLogin(null);
 		
-		String nomePasta = request.getParameter("NomePasta");
-		
-		Pasta pasta = new Pasta();
-		pasta.setNome(nomePasta);
-		pasta.setUsuario(UsuarioLogado);
-		
 		PastaDao dao = new PastaDao();
-		dao.save(pasta);
 		
+		if(request.getParameter("pastaid")==null) {
+			String nomePasta = request.getParameter("NomePasta");
+			Pasta pasta = new Pasta();
+			pasta.setNome(nomePasta);
+			pasta.setUsuario(UsuarioLogado);
+			
+			dao.save(pasta);
+		}else {
+			long pastaid = Long.parseLong(request.getParameter("pastaid"));
+			Pasta pasta = dao.findById(Pasta.class, pastaid).get();
+			
+			pasta.setNome(request.getParameter("NomePasta"));
+			
+			dao.save(pasta);
+		}
 		response.sendRedirect("PaginaPrincial.jsp");
 	}
 

@@ -60,7 +60,7 @@
 												<p class="fw-normal mb-1"><%=obj.getNome()%></p>
 											</td>
 											<td style="text-align: center">
-												<button type="button" class="btn btn-outline-info">Editar</button>
+												<a type="button" class="btn btn-outline-info" href="editPasta.jsp?id=<%= obj.getId()%>">Editar</a>
 												<button type="button" class="btn btn-outline-danger">Excluir</button>
 											</td>
 										</tr>

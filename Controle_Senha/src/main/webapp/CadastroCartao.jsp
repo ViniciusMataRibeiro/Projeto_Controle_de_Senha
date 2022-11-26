@@ -17,7 +17,7 @@ body {
 	align-content: center;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
-	align-items: center;
+	align-items: space-around;
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -25,11 +25,14 @@ body {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	font-family: 'Raleway';
+	
 }
 
 .payment-title {
 	width: 100%;
 	text-align: center;
+	background-color: #f4511e;
+	color: white;
 }
 
 .form-container .field-container:first-of-type {
@@ -58,8 +61,7 @@ body {
 }
 
 .form-container {
-	position: absolute; 
-	display : grid;
+	display: grid;
 	grid-column-gap: 10px;
 	grid-template-columns: auto auto;
 	grid-template-rows: 90px 90px 90px;
@@ -68,6 +70,9 @@ body {
 	padding: 20px;
 	color: #707070;
 	display: grid;
+	position: relative;
+	right:380px;
+	bottom:7px;
 }
 
 label {
@@ -101,7 +106,6 @@ input {
 }
 
 .container {
-	 
 	display: flex;
 	justify-content: center;
 	float: left;
@@ -110,6 +114,8 @@ input {
 	max-height: 251px;
 	height: 54vw;
 	padding: 20px;
+	position: relative;
+	left: 40px;
 }
 
 #ccsingle {
@@ -335,7 +341,8 @@ input {
 }
 
 .creditcard {
-	text-align: center; width : 100%;
+	text-align: center;
+	width: 100%;
 	max-width: 400px;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -377,6 +384,8 @@ input {
 <title>Insert title here</title>
 </head>
 <body>
+	
+	
 	<div class="payment-title">
 		<h1>Cadastro de Cartão</h1>
 	</div>
@@ -406,20 +415,20 @@ input {
                         </g>
                         <text
 							transform="matrix(1 0 0 1 60.106 295.0121)" id="svgnumber"
-							class="st2 st3 st4">0123 4567 8910 1112</text>
+							class="st2 st3 st4">XXXX XXXX XXXX XXXX</text>
                         <text
 							transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname"
-							class="st2 st5 st6">JOHN DOE</text>
+							class="st2 st5 st6">NOME</text>
                         <text
-							transform="matrix(1 0 0 1 54.1074 389.8793)" class="st7 st5 st8">cardholder name</text>
+							transform="matrix(1 0 0 1 54.1074 389.8793)" class="st7 st5 st8">Nome do Títular</text>
                         <text
-							transform="matrix(1 0 0 1 479.7754 388.8793)" class="st7 st5 st8">expiration</text>
+							transform="matrix(1 0 0 1 479.7754 388.8793)" class="st7 st5 st8">Validade</text>
                         <text transform="matrix(1 0 0 1 65.1054 241.5)"
-							class="st7 st5 st8">card number</text>
+							class="st7 st5 st8">Número do Cartão</text>
                         <g>
                             <text
 							transform="matrix(1 0 0 1 574.4219 433.8095)" id="svgexpire"
-							class="st2 st5 st9">01/23</text>
+							class="st2 st5 st9">MM/AA</text>
                             <text
 							transform="matrix(1 0 0 1 479.3848 417.0097)"
 							class="st2 st10 st11">VALID</text>
@@ -475,66 +484,20 @@ input {
                     </g>
                 </svg>
 				</div>
-				<div class="back">
-					<svg version="1.1" id="cardback" xmlns="http://www.w3.org/2000/svg"
-						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						viewBox="0 0 750 471" style="enable-background: new 0 0 750 471;"
-						xml:space="preserve">
-                    <g id="Front">
-                        <line class="st0" x1="35.3" y1="10.4" x2="36.7"
-							y2="11" />
-                    </g>
-                    <g id="Back">
-                        <g id="Page-1_2_">
-                            <g id="amex_2_">
-                                <path id="Rectangle-1_2_"
-							class="darkcolor greydark"
-							d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
-                        C0,17.9,17.9,0,40,0z" />
-                            </g>
-                        </g>
-                        <rect y="61.6" class="st2" width="750"
-							height="78" />
-                        <g>
-                            <path class="st3"
-							d="M701.1,249.1H48.9c-3.3,0-6-2.7-6-6v-52.5c0-3.3,2.7-6,6-6h652.1c3.3,0,6,2.7,6,6v52.5
-                    C707.1,246.4,704.4,249.1,701.1,249.1z" />
-                            <rect x="42.9" y="198.6" class="st4"
-							width="664.1" height="10.5" />
-                            <rect x="42.9" y="224.5" class="st4"
-							width="664.1" height="10.5" />
-                            <path class="st5"
-							d="M701.1,184.6H618h-8h-10v64.5h10h8h83.1c3.3,0,6-2.7,6-6v-52.5C707.1,187.3,704.4,184.6,701.1,184.6z" />
-                        </g>
-                        <text
-							transform="matrix(1 0 0 1 621.999 227.2734)" id="svgsecurity"
-							class="st6 st7">985</text>
-                        <g class="st8">
-                            <text
-							transform="matrix(1 0 0 1 518.083 280.0879)" class="st9 st6 st10">security code</text>
-                        </g>
-                        <rect x="58.1" y="378.6" class="st11"
-							width="375.5" height="13.5" />
-                        <rect x="58.1" y="405.6" class="st11"
-							width="421.7" height="13.5" />
-                        <text
-							transform="matrix(1 0 0 1 59.5073 228.6099)" id="svgnameback"
-							class="st12 st13">John Doe</text>
-                    </g>
-                </svg>
-				</div>
+
 			</div>
 		</div>
 	</div>
 	<div class="form-container">
 		<div class="field-container">
-			<label for="name">Name</label> <input id="name" maxlength="20"
-				type="text">
+			<label for="name"></label> <input id="name" maxlength="20"
+				type="text" class="form-control" placeholder="Nome">
 		</div>
 		<div class="field-container">
-			<label for="cardnumber">Card Number</label><span id="generatecard">generate
+			<label for="cardnumber"></label><span id="generatecard">generate
 				random</span> <input id="cardnumber" type="text" pattern="[0-9]*"
-				inputmode="numeric">
+				inputmode="numeric" class="form-control"
+				placeholder="Número do Cartão">
 			<svg id="ccicon" class="ccicon" width="750" height="471"
 				viewBox="0 0 750 471" version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
@@ -543,13 +506,16 @@ input {
             </svg>
 		</div>
 		<div class="field-container">
-			<label for="expirationdate">Expiration (mm/yy)</label> <input
-				id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric">
+			<label for="expirationdate">Data de vencimento</label> <input
+				id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric"
+				class="form-control" placeholder="MM/AA">
 		</div>
 		<div class="field-container">
-			<label for="securitycode">Security Code</label> <input
-				id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric">
+			<label for="securitycode">Código de Segurança</label> <input
+				id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric"
+				class="form-control" placeholder="CVV">
 		</div>
+		
 	</div>
 </body>
 </html>

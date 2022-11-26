@@ -4,425 +4,367 @@
 <html>
 <head>
 <meta charset="utf-8">
+
 <style type="text/css">
-@import
-	'https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800'
-	;
-
-@import
-	'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900'
-	;
-
-$
-red: #b62138 ; $lred: #ffc6c6 ; $grey: #eee ; $basic-transition: all 200ms linear 
-	;
-	/*👇 Little trick for center W & H where you want*/ @mixin centered {
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	position: absolute;
-	margin: auto;
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	min-height: 100vh;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	font-family: 'Raleway';
 }
 
-@
-mixin input {
-	height: 35px;
-	border: none;
-	background: $grey;
-	border-radius: 3px;
-	outline: none;
+.payment-title {
+	width: 100%;
+	text-align: center;
+}
+
+.form-container .field-container:first-of-type {
+	grid-area: name;
+}
+
+.form-container .field-container:nth-of-type(2) {
+	grid-area: number;
+}
+
+.form-container .field-container:nth-of-type(3) {
+	grid-area: expiration;
+}
+
+.form-container .field-container:nth-of-type(4) {
+	grid-area: security;
+}
+
+.field-container input {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	&:
-	focus
-	{
-	border
-	:
-	1px
-	solid
-	#ccc;
 }
 
+.field-container {
+	position: relative;
 }
-@
-mixin font-label {
-	font-family: 'Roboto';
-	text-transform: uppercase;
+
+.form-container {
+	position: absolute; 
+	display : grid;
+	grid-column-gap: 10px;
+	grid-template-columns: auto auto;
+	grid-template-rows: 90px 90px 90px;
+	grid-template-areas: "name name" "number number" "expiration security";
+	max-width: 400px;
+	padding: 20px;
+	color: #707070;
+	display: grid;
+}
+
+label {
+	padding-bottom: 5px;
+	font-size: 13px;
+}
+
+input {
+	margin-top: 3px;
+	padding: 15px;
+	font-size: 16px;
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #dcdcdc;
+}
+
+.ccicon {
+	height: 38px;
+	position: absolute;
+	right: 6px;
+	top: calc(50% - 17px);
+	width: 60px;
+}
+
+/* CREDIT CARD IMAGE STYLING */
+.preload * {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+
+.container {
+	 
+	display: flex;
+	justify-content: center;
+	float: left;
+	width: 100%;
+	max-width: 1000px;
+	max-height: 251px;
+	height: 54vw;
+	padding: 20px;
+}
+
+#ccsingle {
+	position: absolute;
+	right: 15px;
+	top: 20px;
+}
+
+#ccsingle svg {
+	width: 100px;
+	max-height: 60px;
+}
+
+.creditcard svg#cardfront, .creditcard svg#cardback {
+	width: 100%;
+	-webkit-box-shadow: 1px 5px 6px 0px black;
+	box-shadow: 1px 5px 6px 0px black;
+	border-radius: 22px;
+}
+
+#generatecard {
+	cursor: pointer;
+	float: right;
 	font-size: 12px;
+	color: #fff;
+	padding: 2px 4px;
+	background-color: #909090;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+/* CHANGEABLE CARD ELEMENTS */
+.creditcard .lightcolor, .creditcard .darkcolor {
+	-webkit-transition: fill .5s;
+	transition: fill .5s;
+}
+
+.creditcard .lightblue {
+	fill: #03A9F4;
+}
+
+.creditcard .lightbluedark {
+	fill: #0288D1;
+}
+
+.creditcard .red {
+	fill: #ef5350;
+}
+
+.creditcard .reddark {
+	fill: #d32f2f;
+}
+
+.creditcard .purple {
+	fill: #ab47bc;
+}
+
+.creditcard .purpledark {
+	fill: #7b1fa2;
+}
+
+.creditcard .cyan {
+	fill: #26c6da;
+}
+
+.creditcard .cyandark {
+	fill: #0097a7;
+}
+
+.creditcard .green {
+	fill: #66bb6a;
+}
+
+.creditcard .greendark {
+	fill: #388e3c;
+}
+
+.creditcard .lime {
+	fill: #d4e157;
+}
+
+.creditcard .limedark {
+	fill: #afb42b;
+}
+
+.creditcard .yellow {
+	fill: #ffeb3b;
+}
+
+.creditcard .yellowdark {
+	fill: #f9a825;
+}
+
+.creditcard .orange {
+	fill: #ff9800;
+}
+
+.creditcard .orangedark {
+	fill: #ef6c00;
+}
+
+.creditcard .grey {
+	fill: #bdbdbd;
+}
+
+.creditcard .greydark {
+	fill: #616161;
+}
+
+/* FRONT OF CARD */
+#svgname {
+	text-transform: uppercase;
+}
+
+#cardfront .st2 {
+	fill: #FFFFFF;
+}
+
+#cardfront .st3 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 600;
+}
+
+#cardfront .st4 {
+	font-size: 54.7817px;
+}
+
+#cardfront .st5 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 400;
+}
+
+#cardfront .st6 {
+	font-size: 33.1112px;
+}
+
+#cardfront .st7 {
+	opacity: 0.6;
+	fill: #FFFFFF;
+}
+
+#cardfront .st8 {
+	font-size: 24px;
+}
+
+#cardfront .st9 {
+	font-size: 36.5498px;
+}
+
+#cardfront .st10 {
+	font-family: 'Source Code Pro', monospace;
 	font-weight: 300;
 }
 
-@
-mixin button {
-	height: 43px;
-	border-radius: 3px;
-	font-size: 20px;
-	border: none;
-	outline: none;
-	font-weight: 100;
+#cardfront .st11 {
+	font-size: 16.1716px;
 }
 
-body {
-	background: #ff9999;
-	font-family: 'Dosis';
+#cardfront .st12 {
+	fill: #4C4C4C;
 }
 
-.container { @include centered;
-	width: 425px;
-	height: 442px;
-	background: #ffffff;
-	border-radius: 5px;
-	box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.25);
-	z-index: 2;
-	transition: transform 250ms linear;
+/* BACK OF CARD */
+#cardback .st0 {
+	fill: none;
+	stroke: #0F0F0F;
+	stroke-miterlimit: 10;
 }
 
-.total-logo {
-	position: relative;
-	width: 100%;
-	height: 72px;
-	background: #ccc;
-	display: flex;
-	border-radius: 5px 5px 0 0; . total { width : 50%;
-	height: 100%;
-	background: $red;
-	padding: 10px 30px;
-	box-sizing: border-box;
-	border-radius: 5px 0 0 0; span { display : block;
-	text-transform: uppercase;
-	font-size: 14px;
-	color: #fff;
-	margin-bottom: 3px;
+#cardback .st2 {
+	fill: #111111;
 }
 
-.total-n {
-	font-size: 34px;
+#cardback .st3 {
+	fill: #F2F2F2;
 }
 
-}
-.logo {
-	width: 50%;
-	height: 100%;
-	background: $lred;
-	padding: 20px 30px;
-	box-sizing: border-box;
-	text-align: right;
-	border-radius: 0 5px 0 0;
+#cardback .st4 {
+	fill: #D8D2DB;
 }
 
-}
-.step {
-	position: relative;
-	width: 100%;
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center; . retry { width : 75px;
-	height: 20px;
-	box-sizing: border-box;
-	background-color: $grey;
-	border: 1px solid #b6b6b6;
-	border-radius: 2px;
-	text-align: center;
-	margin: 0 20px;
-	font-family: 'Roboto';
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #b6b6b6;
-	padding-top: 3px;
-	transition: $basic-transition;
-	cursor: pointer; &: hover { background : #b6b6b6;
-	color: $grey;
+#cardback .st5 {
+	fill: #C4C4C4;
 }
 
-}
-.line {
-	width: 195px;
-	height: 1px;
-	background: linear-gradient(to right, $ grey 0%, $ lred 100%);
-}
-
-.payment {
-	width: 75px;
-	height: 20px;
-	box-sizing: border-box;
-	background-color: $lred;
-	border: 1px solid #d77c7c;
-	border-radius: 2px;
-	text-align: center;
-	margin: 0 20px;
-	font-family: 'Roboto';
-	text-transform: uppercase;
-	font-size: 12px;
-	padding-top: 3px;
-	color: $red;
-}
-
-}
-.cont-forms {
-	position: relative;
-	padding: 0px 20px 20px 20px;
-	height: 315px;
-	box-sizing: border-box;
-}
-
-.card-expiration, .card-holder, .card-number {
-	text-transform: capitalize;
-	margin: 5px 0px 15px 0px;
-	font-family: 'Roboto';
-}
-
-.card-number label { @include font-label;
-	display: block;
-	margin-bottom: 10px;
-}
-
-.flex-wrapper {
-	display: flex;
-	align-items: center; input { width : 10%;
-	text-align: center;
-	@
-	include
-	input;
-}
-
-}
-.card-holder {label { @include font-label;
-	display: block;
-	margin-bottom: 10px;
-}
-
-input {
-	width: 100%;
-	@
-	include
-	input;
-}
-
-}
-.card-expiration { .expiry-ccv { display:flex; .expiration-date { width:50%;label
-	{ @include font-label;
-	display: block;
-	margin-bottom: 10px;
-}
-
-input {
-	width: 46%;
-	text-align: center;
-	@
-	include
-	input;
-}
-
-.last {
-	margin-left: 7px;
-}
-
-}
-.ccv {
-	width: 23%; label { @include font-label;
-	display: block;
-	margin-bottom: 10px;
-}
-
-input {
-	width: 100%;
-	text-align: center;
-	@
-	include
-	input;
-}
-
-}
-}
-}
-.conf-button {
-	position: relative;
-	bottom: -35px; . purchase { width : 50%; @ include button;
-	font-family: 'Dosis';
-	text-transform: uppercase;
-	background-color: $red;
-	color: #fff;
-	box-sizing: border-box;
-	transition: $basic-transition;
-	cursor: pointer; &: hover { color : $ red;
-	background: #fff;
-	border: 1px solid$red;
-}
-
-}
-.or-element {
-	width: 10%;
-	font-size: 13px;
+#cardback .st6 {
+	font-family: 'Source Code Pro', monospace;
 	font-weight: 400;
-	text-transform: uppercase;
-	text-align: center;
-	font-family: 'Roboto';
-	cursor: context-menu;
 }
 
-.applepay {
-	width: 40%; @ include button;
-	background-color: #000;
-	color: #fff;
-	box-sizing: border-box;
-	transition: $basic-transition;
-	cursor: pointer; &: hover { color : #000;
-	background: #fff;
-	border: 1px solid #000;
+#cardback .st7 {
+	font-size: 27px;
 }
 
+#cardback .st8 {
+	opacity: 0.6;
 }
+
+#cardback .st9 {
+	fill: #FFFFFF;
 }
-.button-cart {
-	width: 40px;
-	height: 50px;
-	background: $red;
-	position: absolute;
-	right: -40px;
-	bottom: calc(50% - 25px);
-	border-radius: 0 5px 5px 0;
-	box-shadow: inset 11px 0px 30px -15px #000;
+
+#cardback .st10 {
+	font-size: 24px;
+}
+
+#cardback .st11 {
+	fill: #EAEAEA;
+}
+
+#cardback .st12 {
+	font-family: 'Rock Salt', cursive;
+}
+
+#cardback .st13 {
+	font-size: 37.769px;
+}
+
+/* FLIP ANIMATION */
+.container {
+	perspective: 1000px;
+}
+
+.creditcard {
+	text-align: center; width : 100%;
+	max-width: 400px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	transition: -webkit-transform 0.6s;
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	transition: transform 0.6s, -webkit-transform 0.6s;
 	cursor: pointer;
-	opacity: 1;
-	transition: all 250ms linear;
-	&:
-	hover
-	{
-	background
-	:
-	$
-	lred;
+	width: 100%;
 }
 
-img {
-	width: 25px;
-	margin-top: 13px;
-	margin-left: 7px;
-}
-
-.product-in-cart {
-	position: absolute;
-	background: #000000;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	right: -8px;
-	top: -8px; span { position : relative;
-	display: block;
-	color: #fff;
-	padding-top: 3px;
-	text-align: center;
-	font-size: 13px;
-}
-
-}
-}
-.cont-product { @include centered;
-	width: 97px;
-	height: 351px;
-	transition: transform 250ms linear;
-	z-index: 1; . product { position : relative;
-	height: 97px;
-	overflow: hidden;
-	background: #fff;
-	border-radius: 5px;
-	text-align: center;
-	margin: 10px 0px 10px 0px;
-	z-index: 1;
-	transition: transform 300ms cubic-bezier(0, 0, 0, 2.39);
-	cursor: pointer; img { @include centered;
-	width: 80%;
-}
-
-.cont-options {
+.creditcard .front, .creditcard .back {
 	position: absolute;
 	width: 100%;
-	height: 15px;
-	bottom: -15px;
-	transition: bottom 250ms linear; . quantity { position : relative;
-	width: 50%;
-	height: 100%;
-	background: $grey; . plus { position : absolute;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	width: 30%;
-	padding: 0;
-	margin: 0;
-	border: none;
-	outline: none;
-	background: #000;
-	color: #fff;
+	max-width: 400px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+	color: #47525d;
 }
 
-.num { @include centered;
-	top: 1px;
-	width: 40%;
-	color: $red;
-	font-size: 80%;
+.creditcard .back {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
-.minus {
-	position: absolute;
-	height: 100%;
-	right: 0;
-	width: 30%;
-	padding: 0 0 0px 0;
-	margin: 0;
-	border: none;
-	outline: none;
-	background: #000;
-	color: #fff;
-}
-
-}
-.remove {
-	position: absolute;
-	width: 50%;
-	height: 100%;
-	background: $red;
-	margin: 0;
-	padding: 0;
-	right: 0;
-	top: 0;
-	border: none;
-	text-transform: uppercase;
-	font-size: 41%;
-	font-weight: 100;
-	color: #fff;
-	outline: none;
-}
-
-}
-}
-.active {
-	z-index: 3;
-	transform: scale(2);
-	box-shadow: 0 0 27px rgba(0, 0, 0, 0.25);
-}
-
-}
-
-/*class for animation*/
-.slideup {
-	bottom: 0 !important;
-}
-
-.zindex {
-	z-index: 2;
-}
-
-.slide-right {
-	transform: translateX(200px);
-}
-
-.slide-cont-left {
-	transform: translateX(-100px);
-}
-
-.btn-hiding {
-	opacity: 0;
+.creditcard.flipped {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 </style>
 
@@ -435,75 +377,179 @@ img {
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container">
-		<div class="total-logo" style="padding-left: 460px">
-
-			<img
-				src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/163884/logo-vans.png">
-
-		</div>
-
-		<div class="form-group">
-			<label for="exampleFormControlSelect1">Selecione o cartão</label> <select
-				class="form-control" id="exampleFormControlSelect1">
-				<option>Visa</option>
-				<option>Master</option>
-				<option>Elo</option>
-				<option>Hipercard</option>
-				<option>Maestro</option>
-			</select>
-		</div>
-		<div class="cont-forms">
-			<form class="form" autocomplete="off" novalidate>
-				<fieldset class="card-number">
-					<label for="card-num">Número do cartao de credito</label>
-					<div class="flex-wrapper">
-						<input class="cc-number" type="num" maxlength="4" /> <input
-							class="cc-number" type="num" maxlength="4" /> <input
-							class="cc-number" type="num" maxlength="4" /> <input
-							class="cc-number" type="num" maxlength="4" />
-					</div>
-				</fieldset>
-				<fieldset class="card-holder">
-					<label for="card-num">Titular do cartão</label> <input type="text" />
-				</fieldset>
-				<fieldset class="card-expiration">
-					<div class="expiry-ccv">
-						<div class="cont expiration-date">
-							<label for="card-num">Data de Validade</label> <input type="numb"
-								maxlength="2" /> <input class="last" type="num" maxlength="4" />
-						</div>
-						<br />
-						<div class="cont ccv">
-							<label for="card-ccv">CCV</label> <input type="num" maxlength="3" />
-						</div>
-					</div>
-				</fieldset>
-				<fieldset class="conf-button">
-					<div class="flex-wrapper">
-						<button class="purchase">
-							<span>Confirma</span>
-						</button>
-						<div class="or-element">
-							<span>&emsp;<span>
-						</div>
-						<button class="applepay">
-							<span>Cancelar</span>
-						</button>
-					</div>
-				</fieldset>
-			</form>
-		</div>
-		<!--End CONT-FORMS-->
-		<div class="button-cart">
-			<img class="icon-cart"
-				src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/163884/icona-shop.svg">
-			<div class="product-in-cart">
-				<span>3</span>
+	<div class="payment-title">
+		<h1>Cadastro de Cartão</h1>
+	</div>
+	<div style="border: 9px">
+		<div class="container preload">
+			<div class="creditcard"
+				style="text-align: center; padding-left: 450px">
+				<div class="front">
+					<div id="ccsingle"></div>
+					<svg version="1.1" id="cardfront"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 750 471" style="enable-background: new 0 0 750 471;"
+						xml:space="preserve">
+                    <g id="Front">
+                        <g id="CardBackground">
+                            <g id="Page-1_1_">
+                                <g id="amex_1_">
+                                    <path id="Rectangle-1_1_"
+							class="lightcolor grey"
+							d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                            C0,17.9,17.9,0,40,0z" />
+                                </g>
+                            </g>
+                            <path class="darkcolor greydark"
+							d="M750,431V193.2c-217.6-57.5-556.4-13.5-750,24.9V431c0,22.1,17.9,40,40,40h670C732.1,471,750,453.1,750,431z" />
+                        </g>
+                        <text
+							transform="matrix(1 0 0 1 60.106 295.0121)" id="svgnumber"
+							class="st2 st3 st4">0123 4567 8910 1112</text>
+                        <text
+							transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname"
+							class="st2 st5 st6">JOHN DOE</text>
+                        <text
+							transform="matrix(1 0 0 1 54.1074 389.8793)" class="st7 st5 st8">cardholder name</text>
+                        <text
+							transform="matrix(1 0 0 1 479.7754 388.8793)" class="st7 st5 st8">expiration</text>
+                        <text transform="matrix(1 0 0 1 65.1054 241.5)"
+							class="st7 st5 st8">card number</text>
+                        <g>
+                            <text
+							transform="matrix(1 0 0 1 574.4219 433.8095)" id="svgexpire"
+							class="st2 st5 st9">01/23</text>
+                            <text
+							transform="matrix(1 0 0 1 479.3848 417.0097)"
+							class="st2 st10 st11">VALID</text>
+                            <text
+							transform="matrix(1 0 0 1 479.3848 435.6762)"
+							class="st2 st10 st11">THRU</text>
+                            <polygon class="st2"
+							points="554.5,421 540.4,414.2 540.4,427.9    " />
+                        </g>
+                        <g id="cchip">
+                            <g>
+                                <path class="st2"
+							d="M168.1,143.6H82.9c-10.2,0-18.5-8.3-18.5-18.5V74.9c0-10.2,8.3-18.5,18.5-18.5h85.3
+                        c10.2,0,18.5,8.3,18.5,18.5v50.2C186.6,135.3,178.3,143.6,168.1,143.6z" />
+                            </g>
+                            <g>
+                                <g>
+                                    <rect x="82" y="70" class="st12"
+							width="1.5" height="60" />
+                                </g>
+                                <g>
+                                    <rect x="167.4" y="70" class="st12"
+							width="1.5" height="60" />
+                                </g>
+                                <g>
+                                    <path class="st12"
+							d="M125.5,130.8c-10.2,0-18.5-8.3-18.5-18.5c0-4.6,1.7-8.9,4.7-12.3c-3-3.4-4.7-7.7-4.7-12.3
+                            c0-10.2,8.3-18.5,18.5-18.5s18.5,8.3,18.5,18.5c0,4.6-1.7,8.9-4.7,12.3c3,3.4,4.7,7.7,4.7,12.3
+                            C143.9,122.5,135.7,130.8,125.5,130.8z M125.5,70.8c-9.3,0-16.9,7.6-16.9,16.9c0,4.4,1.7,8.6,4.8,11.8l0.5,0.5l-0.5,0.5
+                            c-3.1,3.2-4.8,7.4-4.8,11.8c0,9.3,7.6,16.9,16.9,16.9s16.9-7.6,16.9-16.9c0-4.4-1.7-8.6-4.8-11.8l-0.5-0.5l0.5-0.5
+                            c3.1-3.2,4.8-7.4,4.8-11.8C142.4,78.4,134.8,70.8,125.5,70.8z" />
+                                </g>
+                                <g>
+                                    <rect x="82.8" y="82.1" class="st12"
+							width="25.8" height="1.5" />
+                                </g>
+                                <g>
+                                    <rect x="82.8" y="117.9"
+							class="st12" width="26.1" height="1.5" />
+                                </g>
+                                <g>
+                                    <rect x="142.4" y="82.1"
+							class="st12" width="25.8" height="1.5" />
+                                </g>
+                                <g>
+                                    <rect x="142" y="117.9" class="st12"
+							width="26.2" height="1.5" />
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Back">
+                    </g>
+                </svg>
+				</div>
+				<div class="back">
+					<svg version="1.1" id="cardback" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 750 471" style="enable-background: new 0 0 750 471;"
+						xml:space="preserve">
+                    <g id="Front">
+                        <line class="st0" x1="35.3" y1="10.4" x2="36.7"
+							y2="11" />
+                    </g>
+                    <g id="Back">
+                        <g id="Page-1_2_">
+                            <g id="amex_2_">
+                                <path id="Rectangle-1_2_"
+							class="darkcolor greydark"
+							d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                        C0,17.9,17.9,0,40,0z" />
+                            </g>
+                        </g>
+                        <rect y="61.6" class="st2" width="750"
+							height="78" />
+                        <g>
+                            <path class="st3"
+							d="M701.1,249.1H48.9c-3.3,0-6-2.7-6-6v-52.5c0-3.3,2.7-6,6-6h652.1c3.3,0,6,2.7,6,6v52.5
+                    C707.1,246.4,704.4,249.1,701.1,249.1z" />
+                            <rect x="42.9" y="198.6" class="st4"
+							width="664.1" height="10.5" />
+                            <rect x="42.9" y="224.5" class="st4"
+							width="664.1" height="10.5" />
+                            <path class="st5"
+							d="M701.1,184.6H618h-8h-10v64.5h10h8h83.1c3.3,0,6-2.7,6-6v-52.5C707.1,187.3,704.4,184.6,701.1,184.6z" />
+                        </g>
+                        <text
+							transform="matrix(1 0 0 1 621.999 227.2734)" id="svgsecurity"
+							class="st6 st7">985</text>
+                        <g class="st8">
+                            <text
+							transform="matrix(1 0 0 1 518.083 280.0879)" class="st9 st6 st10">security code</text>
+                        </g>
+                        <rect x="58.1" y="378.6" class="st11"
+							width="375.5" height="13.5" />
+                        <rect x="58.1" y="405.6" class="st11"
+							width="421.7" height="13.5" />
+                        <text
+							transform="matrix(1 0 0 1 59.5073 228.6099)" id="svgnameback"
+							class="st12 st13">John Doe</text>
+                    </g>
+                </svg>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!--End CONTAINER-->
-	<div class="cont-product"></div>
+	<div class="form-container">
+		<div class="field-container">
+			<label for="name">Name</label> <input id="name" maxlength="20"
+				type="text">
+		</div>
+		<div class="field-container">
+			<label for="cardnumber">Card Number</label><span id="generatecard">generate
+				random</span> <input id="cardnumber" type="text" pattern="[0-9]*"
+				inputmode="numeric">
+			<svg id="ccicon" class="ccicon" width="750" height="471"
+				viewBox="0 0 750 471" version="1.1"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            </svg>
+		</div>
+		<div class="field-container">
+			<label for="expirationdate">Expiration (mm/yy)</label> <input
+				id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric">
+		</div>
+		<div class="field-container">
+			<label for="securitycode">Security Code</label> <input
+				id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric">
+		</div>
+	</div>
 </body>
 </html>

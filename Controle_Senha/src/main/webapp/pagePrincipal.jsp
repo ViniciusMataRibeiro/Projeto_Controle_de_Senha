@@ -404,7 +404,7 @@ keyframes slide { 0% {
 					<img src="https://www.w3schools.com/bootstrap/birds1.jpg"
 						alt="Modelo" width="400" height="300">
 					<p>
-						<strong>Pagina Principal</strong>
+						<strong>Cadastro de Serviços</strong>
 					</p>
 					<p>Imagem meramente ilustrativa</p>
 				</div>
@@ -421,7 +421,7 @@ keyframes slide { 0% {
 			</div>
 			<div class="col-sm-4">
 				<div class="thumbnail">
-					<img src="Fotos/PageCartao.png"
+					<img src="Fotos/PageCartao2.png"
 						alt="Modelo" width="400" height="300">
 					<p>
 						<strong>Cadastro de Cartão</strong>

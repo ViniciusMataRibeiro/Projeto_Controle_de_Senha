@@ -113,9 +113,7 @@
 												style="width: 96%; border-color: #ced4da;">
 												<option selected>Selecione Pasta</option>
 												<%
-												int cont = 0;
 												for (Pasta obj : listPasta) {
-													cont += 1;
 												%>
 												<option value="<%=obj.getId()%>"><%=obj.getNome()%></option>
 												<%

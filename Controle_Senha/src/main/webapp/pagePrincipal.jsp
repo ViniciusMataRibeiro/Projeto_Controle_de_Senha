@@ -269,7 +269,7 @@ if (usuario != null) {
 
 	<div class="jumbotron text-center">
 		<h1>RibeiroKey</h1>
-		<p>Somos especialistas em facilitar sua vida</p>
+		<p>Você no controle de suas senhas, em um só lugar</p>
 	</div>
 
 	<!-- Container (About Section) -->
@@ -278,13 +278,12 @@ if (usuario != null) {
 			<div class="col-sm-10">
 				<h2>SOBRE</h2>
 				<br>
-				<h4>Guarde com rapidez e segurança com o gerenciador de senhas
+				<h4>Guarde suas senhas, com segurança e rapidez, utilizando o gerenciador de senhas
 					confiável por milhões.</h4>
 				<br>
 				<p>A maneira mais fácil e segura de gerenciar suas credenciais,
-					senhas, cartões de crédito e outros, sempre protegendo voce e sua
-					familia. Vá em frente, esqueça as senhas: o RibeiroKey memorizará
-					todas elas para você...</p>
+					senhas, cartões de crédito e outros, sempre protegendo você e sua
+					família. Vá em frente, esqueça as senhas: a RibeiroKey cuidará de tudo para você.</p>
 				<br> <br>
 			</div>
 			<div class="col-sm-2">
@@ -301,7 +300,7 @@ if (usuario != null) {
 		</p>
 		<p>Criamos um site de Gerenciamento de senhas. É importante cuidar
 			da segurança, ser um parceiro ao cliente, mas, ao mesmo tempo, ele
-			nós ajudará a crescer a cada dia mais. Pois, para chegar ao topo
+			nos ajudará a crescer a cada dia mais. Pois, para chegar ao topo
 			precisamos de todo feedback, em cada detalhe, a cada interação,
 			ninguém deve ficar insatisfeito com nosso site, que a menos que tire
 			algum proveito disso.</p>
@@ -352,22 +351,15 @@ if (usuario != null) {
 				<h2>NOSSOS VALORES</h2>
 				<br>
 				<h4>
-					<strong>MISSÃO:</strong> Nossa missão lorem ipsum dolor sit amet,
-					consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-					nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo
-					consequat.
+					<strong>MISSÃO:</strong> Nossa missão é permitir que nossos clientes 
+					tenham o poder de gerenciar suas senhas da forma mais segura e conveniente,
+					e tudo isso em um só lugar.
 				</h4>
 				<br>
 				<p>
-					<strong>VISÃO:</strong> Nossa visão Lorem ipsum dolor sit amet,
-					consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-					nostrud exercitation ullamco laboris nisi ut aliquip ex ea comodo
-					consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-					nisi ut aliquip ex ea comodo consequat.
+					<strong>VISÃO:</strong> Nossa visão, como uma empresa de gerenciamento de senhas,
+					é garantir a despreocupação do cliente em relação ao controle de suas senhas, 
+					tornando o mundo online um lugar mais seguro. Todos merecem estar seguros online.
 				</p>
 			</div>
 		</div>
@@ -381,13 +373,13 @@ if (usuario != null) {
 		<div class="row slideanim">
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-off logo-small"></span>
-				<h4>POWER</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
+				<h4>SEGURANÇA</h4>
+				<p>Garantindo sempre a melhor segurança</p>
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-heart logo-small"></span>
-				<h4>AMOR</h4>
-				<p>Tudo que fizemos é por Amor!</p>
+				<h4>AGILIDADE</h4>
+				<p>Facil utilização e em um só lugar </p>
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-lock logo-small"></span>
@@ -399,8 +391,8 @@ if (usuario != null) {
 		<div class="row slideanim">
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-leaf logo-small"></span>
-				<h4>VERDE</h4>
-				<p>Preocupado com o meio ambiente</p>
+				<h4>GERENCIAMENTO</h4>
+				<p>Organização da forma que desejar</p>
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-certificate logo-small"></span>

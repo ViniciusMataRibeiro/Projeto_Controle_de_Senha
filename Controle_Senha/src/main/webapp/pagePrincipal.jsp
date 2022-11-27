@@ -217,10 +217,8 @@ keyframes slide { 0% {
 }
 </style>
 </head>
-<body>
 <body id="myPage" data-spy="scroll" data-target=".navbar"
 	data-offset="60">
-
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -238,10 +236,10 @@ keyframes slide { 0% {
 					<li><a href="#portfolio">SITE</a></li>
 					<li><a href="#pricing">PREÇOS</a></li>
 					<li><a href="#contact">CONTATO</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span>
-							INSCREVER-SE</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
-							CONECTE-SE</a></li>
+					<li><a href="#pricing"><span
+							class="glyphicon glyphicon-user"></span> INSCREVER-SE</a></li>
+					<li><a href="<%=request.getContextPath()%>/formLogin.jsp"><span
+							class="glyphicon glyphicon-log-in"></span> CONECTE-SE</a></li>
 				</ul>
 			</div>
 		</div>
@@ -258,20 +256,13 @@ keyframes slide { 0% {
 			<div class="col-sm-10">
 				<h2>SOBRE</h2>
 				<br>
-				<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-					nisi ut aliquip ex ea commodo consequat.</h4>
+				<h4>Guarde com rapidez e segurança com o gerenciador de senhas
+					confiável por milhões.</h4>
 				<br>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-					enim ad minim veniam, quis nostrud exercitation ullamco laboris
-					nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
-					cupidatat non proident, sunt in culpa qui officia deserunt mollit
-					anim id est laborum consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat.</p>
+				<p>A maneira mais fácil e segura de gerenciar suas credenciais,
+					senhas, cartões de crédito e outros, sempre protegendo voce e sua
+					familia. Vá em frente, esqueça as senhas: o RibeiroKey memorizará
+					todas elas para você...</p>
 				<br> <br>
 			</div>
 			<div class="col-sm-2">
@@ -289,23 +280,23 @@ keyframes slide { 0% {
 		<p>Criamos um site de Gerenciamento de senhas. É importante cuidar
 			da segurança, ser um parceiro ao cliente, mas, ao mesmo tempo, ele
 			nós ajudará a crescer a cada dia mais. Pois, para chegar ao topo
-			precisamos de todo feedback, em cada detalhe, a cada interação, ninguém deve ficar
-			insatisfeito com nosso site, que a menos que tire algum proveito disso.</p>
+			precisamos de todo feedback, em cada detalhe, a cada interação,
+			ninguém deve ficar insatisfeito com nosso site, que a menos que tire
+			algum proveito disso.</p>
 		<br>
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="col-sm-4" style="margin-left: 20%;">
 				<p class="text-center">
 					<strong>Vinicius Ribeiro</strong>
 				</p>
 				<br> <a href="#demo" data-toggle="collapse"> <img
-					src="https://img.ibxk.com.br/2019/02/17/17124052466014.jpg?ims=704x"
-					class="img-circle person" alt="Random Name" width="255"
-					height="255">
+					src="Fotos/FotoVinicius2.jpg" class="img-circle person"
+					alt="Random Name" width="255" height="255">
 				</a>
 				<div id="demo" class="collapse">
 					<br>
 					<p>Desenvolvedor Front e Back End</p>
-					<p>Odeia Java</p>
+					<p>Ama Mobile</p>
 					<p>Aluno da Computação</p>
 				</div>
 			</div>
@@ -314,31 +305,14 @@ keyframes slide { 0% {
 					<strong>Gabriel Ribeiro</strong>
 				</p>
 				<br> <a href="#demo2" data-toggle="collapse"> <img
-					src="https://img.ibxk.com.br/2019/02/17/17124052466014.jpg?ims=704x"
-					class="img-circle person" alt="Random Name" width="255"
-					height="255">
+					src="Fotos/FotoGabriel.jpg" class="img-circle person"
+					alt="Random Name" width="255" height="255">
 				</a>
 				<div id="demo2" class="collapse">
 					<br>
 					<p>Desenvolvedor Front e Back End</p>
 					<p>Ama um Vava</p>
 					<p>Aluno da Computação</p>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<p class="text-center">
-					<strong>Mauricio</strong>
-				</p>
-				<br> <a href="#demo3" data-toggle="collapse"> <img
-					src="https://img.ibxk.com.br/2019/02/17/17124052466014.jpg?ims=704x"
-					class="img-circle person" alt="Random Name" width="255"
-					height="255">
-				</a>
-				<div id="demo3" class="collapse">
-					<br>
-					<p>Professor e Mestre</p>
-					<p>Ama Java</p>
-					<p>Professor de Ling</p>
 				</div>
 			</div>
 		</div>
@@ -390,31 +364,31 @@ keyframes slide { 0% {
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-heart logo-small"></span>
-				<h4>LOVE</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
+				<h4>AMOR</h4>
+				<p>Tudo que fizemos é por Amor!</p>
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-lock logo-small"></span>
-				<h4>JOB DONE</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
+				<h4>TAREFA CONCLUÍDA</h4>
+				<p>Entregando sempre o Melhor!</p>
 			</div>
 		</div>
 		<br> <br>
 		<div class="row slideanim">
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-leaf logo-small"></span>
-				<h4>GREEN</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
+				<h4>VERDE</h4>
+				<p>Preocupado com o meio ambiente</p>
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-certificate logo-small"></span>
-				<h4>CERTIFIED</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
+				<h4>CERTIFICADO</h4>
+				<p>Garantia de satisfação</p>
 			</div>
 			<div class="col-sm-4">
 				<span class="glyphicon glyphicon-wrench logo-small"></span>
-				<h4 style="color: #303030;">HARD WORK</h4>
-				<p>Lorem ipsum dolor sit amet..</p>
+				<h4 style="color: #303030;">TRABALHO DURO</h4>
+				<p>Disponível 24 horas para solucionar qualquer problema</p>
 			</div>
 		</div>
 	</div>
@@ -437,7 +411,7 @@ keyframes slide { 0% {
 			</div>
 			<div class="col-sm-4">
 				<div class="thumbnail">
-					<img src="https://www.w3schools.com/bootstrap/birds1.jpg"
+					<img src="Fotos/PageCriarPasta.png"
 						alt="Modelo" width="400" height="300">
 					<p>
 						<strong>Cadastro de Pasta</strong>
@@ -447,10 +421,10 @@ keyframes slide { 0% {
 			</div>
 			<div class="col-sm-4">
 				<div class="thumbnail">
-					<img src="https://www.w3schools.com/bootstrap/birds1.jpg"
+					<img src="Fotos/PageCartao.png"
 						alt="Modelo" width="400" height="300">
 					<p>
-						<strong>Cadastro do Serviço</strong>
+						<strong>Cadastro de Cartão</strong>
 					</p>
 					<p>Imagem meramente ilustrativa</p>
 				</div>
@@ -530,7 +504,7 @@ keyframes slide { 0% {
 					<div class="panel-footer">
 						<h3>GRATUITAMENTE</h3>
 						<h4>MELHOR OFERTA!</h4>
-						<button class="btn btn-lg">Inscrever-se</button>
+						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp" class="btn btn-lg">Inscrever-se</a>
 					</div>
 				</div>
 			</div>
@@ -556,7 +530,7 @@ keyframes slide { 0% {
 					<div class="panel-footer">
 						<h3>R$29,99</h3>
 						<h4>por mês</h4>
-						<button class="btn btn-lg">Inscrever-se</button>
+						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp" class="btn btn-lg">Inscrever-se</a>
 					</div>
 				</div>
 			</div>
@@ -582,7 +556,7 @@ keyframes slide { 0% {
 					<div class="panel-footer">
 						<h3>R$49,99</h3>
 						<h4>por mês</h4>
-						<button class="btn btn-lg">Inscrever-se</button>
+						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp" class="btn btn-lg">Inscrever-se</a>
 					</div>
 				</div>
 			</div>

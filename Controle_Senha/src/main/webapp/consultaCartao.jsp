@@ -1,8 +1,10 @@
+<%@page import="model.Pasta"%>
+<%@page import="dao.PastaDao"%>
+<%@page import="model.Cartao"%>
+<%@page import="dao.CartaoDao"%>
 <%@page import="util.Login"%>
 <%@page import="model.Usuario"%>
 <%@page import="java.util.List"%>
-<%@page import="model.Pasta"%>
-<%@page import="dao.PastaDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -17,7 +19,7 @@
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<title>Pastas</title>
+<title>Cartões</title>
 
 <style>
 body {
@@ -217,14 +219,13 @@ keyframes slide { 0% {
 	}
 }
 </style>
-
 </head>
 <body>
 
 	<%
-	PastaDao dao = new PastaDao();
-	List<Pasta> listPasta = dao.findAll(Pasta.class);
-	Usuario usuario = Login.GetLogin(null);
+	CartaoDao dao = new CartaoDao();
+	PastaDao pastadao = new PastaDao();
+	List<Cartao> listCartao = dao.findAll(Cartao.class);
 	%>
 
 	<section class="vh-100" style="background-color: #eee;">
@@ -262,38 +263,47 @@ keyframes slide { 0% {
 								<table class="table align-middle mb-0 bg-white">
 									<thead class="bg-light">
 										<tr>
-											<th>Usuário</th>
-											<th>Nome Pasta</th>
+											<th>Nome</th>
+											<th>Titular</th>
+											<th>Bandeira</th>
+											<th>Numero</th>
+											<th>Mes Vencimento</th>
+											<th>Pasta</th>
 											<th style="text-align: center;">Ação</th>
 										</tr>
 										<a type="button" class="btn btn-outline-success"
-											href="cadastroPasta.jsp">Novo</a>
+											href="CadastroCartao.jsp">Novo</a>
 									</thead>
 									<tbody>
 										<%
-										for (Pasta obj : listPasta) {
+										for (Cartao obj : listCartao) {
+											
+											Pasta pasta = pastadao.findByIdPasta(Pasta.class, obj.getPasta()).get();
 										%>
 										<tr>
 											<td>
-												<div class="d-flex align-items-center">
-													<img
-														src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png"
-														alt="" style="width: 45px; height: 45px"
-														class="rounded-circle" />
-													<div class="ms-3">
-														<p class="fw-bold mb-1"><%=usuario.getNome()%></p>
-														<p class="text-muted mb-0"><%=usuario.getEmail()%></p>
-													</div>
-												</div>
+												<p class="fw-bold mb-1"><%=obj.getNome()%></p>
 											</td>
 											<td>
-												<p class="fw-normal mb-1"><%=obj.getNome()%></p>
+												<p class="fw-normal mb-1"><%=obj.getTitular()%></p>
+											</td>
+											<td>
+												<p class="fw-normal mb-1"><%=obj.getBandeira()%></p>
+											</td>
+											<td>
+												<p class="fw-normal mb-1"><%=obj.getNumero()%></p>
+											</td>
+											<td>
+												<p class="fw-normal mb-1"><%=obj.getMesVencimento()%></p>
+											</td>
+											<td>
+												<p class="fw-normal mb-1"><%=pasta.getNome()%></p>
 											</td>
 											<td style="text-align: center"><a type="button"
 												class="btn btn-outline-info"
-												href="editPasta.jsp?id=<%=obj.getId()%>">Editar</a> <a
+												href="editCartao.jsp?id=<%=obj.getId()%>">Editar</a> <a
 												type="button" class="btn btn-outline-danger"
-												href="<%=request.getContextPath()%>/ControllerPasta?id=<%=obj.getId()%>">Excluir</a>
+												href="<%=request.getContextPath()%>/ServletCartao?cartaoid=<%=obj.getId()%>">Excluir</a>
 											</td>
 										</tr>
 										<%
@@ -308,9 +318,5 @@ keyframes slide { 0% {
 			</div>
 		</div>
 	</section>
-
-
-
-
 </body>
 </html>

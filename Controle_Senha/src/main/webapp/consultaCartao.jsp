@@ -270,7 +270,7 @@ keyframes slide { 0% {
 											<th style="text-align: center;">Ação</th>
 										</tr>
 										<a type="button" class="btn btn-outline-success"
-											href="CadastroCartao.jsp">Novo</a>
+											href="cadastroCartao.jsp">Novo</a>
 									</thead>
 									<tbody>
 										<%

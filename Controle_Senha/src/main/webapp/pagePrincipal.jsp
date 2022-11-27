@@ -474,7 +474,7 @@ if (usuario != null) {
 					<%
 					if (log) {
 					%>
-					<a type="submit" href="<%=request.getContextPath()%>/CadastroCartao.jsp"> <img
+					<a type="submit" href="<%=request.getContextPath()%>/cadastroCartao.jsp"> <img
 						src="Fotos/PageCartao2.png" alt="Modelo" width="400" height="300">
 					</a>
 					<%

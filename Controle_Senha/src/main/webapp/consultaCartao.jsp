@@ -241,14 +241,12 @@ keyframes slide { 0% {
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<p style="margin-left: 22%; margin-top: 1%;">
 						<a href="<%=request.getContextPath()%>/consultarServico.jsp"
-							style="color: #fff; margin: 15px;">Consultar Serviços</a> <a
-							href="<%=request.getContextPath()%>/consultaCartao.jsp"
-							style="color: #fff; margin: 15px;">Consultar Cartões</a> <a
+							style="color: #fff; margin: 15px;">Consultar Serviços</a><a
 							href="<%=request.getContextPath()%>/consultaPasta.jsp"
 							style="color: #fff; margin: 15px;">Consultar Pastas</a><a
 							style="color: #fff; margin: 15px;"
-							href="<%=request.getContextPath()%>/pagePrincipal.jsp"><span
-							class="glyphicon glyphicon-log-in"></span> Pagina principal</a>
+							href="<%=request.getContextPath()%>/pagePrincipal.jsp">Pagina
+							principal</a>
 					</p>
 				</div>
 			</div>
@@ -277,7 +275,7 @@ keyframes slide { 0% {
 									<tbody>
 										<%
 										for (Cartao obj : listCartao) {
-											
+
 											Pasta pasta = pastadao.findByIdPasta(Pasta.class, obj.getPasta()).get();
 										%>
 										<tr>

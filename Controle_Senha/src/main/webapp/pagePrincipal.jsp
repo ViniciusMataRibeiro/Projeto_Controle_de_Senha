@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@page import="util.Login"%>
+<%@page import="model.Usuario"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
@@ -217,6 +219,15 @@ keyframes slide { 0% {
 }
 </style>
 </head>
+
+<%
+Usuario usuario = Login.GetLogin(null);
+boolean log = false;
+if (usuario != null) {
+	log = true;
+}
+%>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar"
 	data-offset="60">
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -236,10 +247,21 @@ keyframes slide { 0% {
 					<li><a href="#portfolio">SITE</a></li>
 					<li><a href="#pricing">PREÇOS</a></li>
 					<li><a href="#contact">CONTATO</a></li>
+					<%
+					if (log) {
+					%>
+					<li><a href=""><span class="glyphicon glyphicon-log-in"></span>
+							Logado: <%=usuario.getNome()%></a></li>
+					<%
+					} else {
+					%>
 					<li><a href="#pricing"><span
 							class="glyphicon glyphicon-user"></span> INSCREVER-SE</a></li>
 					<li><a href="<%=request.getContextPath()%>/formLogin.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> CONECTE-SE</a></li>
+					<%
+					}
+					%>
 				</ul>
 			</div>
 		</div>
@@ -401,8 +423,22 @@ keyframes slide { 0% {
 		<div class="row text-center slideanim">
 			<div class="col-sm-4">
 				<div class="thumbnail">
-					<img src="https://www.w3schools.com/bootstrap/birds1.jpg"
-						alt="Modelo" width="400" height="300">
+					<%
+					if (log) {
+					%>
+					<a type="submit" href="cadastroServico"> <img
+						src="" alt="Modelo" width="400" height="300">
+					</a>
+					<%
+					} else {
+					%>
+					<a type="submit" href="<%=request.getContextPath()%>/formLogin.jsp">
+						<img src="" alt="Modelo" width="400"
+						height="300">
+					</a>
+					<%
+					}
+					%>
 					<p>
 						<strong>Cadastro de Serviços</strong>
 					</p>
@@ -411,8 +447,22 @@ keyframes slide { 0% {
 			</div>
 			<div class="col-sm-4">
 				<div class="thumbnail">
-					<img src="Fotos/PageCriarPasta.png"
-						alt="Modelo" width="400" height="300">
+					<%
+					if (log) {
+					%>
+					<a type="submit" href="<%=request.getContextPath()%>/cadastroPasta.jsp"> <img
+						src="Fotos/PageCriarPasta.png" alt="Modelo" width="400" height="300">
+					</a>
+					<%
+					} else {
+					%>
+					<a type="submit" href="<%=request.getContextPath()%>/formLogin.jsp">
+						<img src="Fotos/PageCriarPasta.png" alt="Modelo" width="400"
+						height="300">
+					</a>
+					<%
+					}
+					%>
 					<p>
 						<strong>Cadastro de Pasta</strong>
 					</p>
@@ -421,8 +471,22 @@ keyframes slide { 0% {
 			</div>
 			<div class="col-sm-4">
 				<div class="thumbnail">
-					<img src="Fotos/PageCartao2.png"
-						alt="Modelo" width="400" height="300">
+					<%
+					if (log) {
+					%>
+					<a type="submit" href="<%=request.getContextPath()%>/CadastroCartao.jsp"> <img
+						src="Fotos/PageCartao2.png" alt="Modelo" width="400" height="300">
+					</a>
+					<%
+					} else {
+					%>
+					<a type="submit" href="<%=request.getContextPath()%>/formLogin.jsp">
+						<img src="Fotos/PageCartao2.png" alt="Modelo" width="400"
+						height="300">
+					</a>
+					<%
+					}
+					%>
 					<p>
 						<strong>Cadastro de Cartão</strong>
 					</p>
@@ -504,7 +568,8 @@ keyframes slide { 0% {
 					<div class="panel-footer">
 						<h3>GRATUITAMENTE</h3>
 						<h4>MELHOR OFERTA!</h4>
-						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp" class="btn btn-lg">Inscrever-se</a>
+						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp"
+							class="btn btn-lg">Inscrever-se</a>
 					</div>
 				</div>
 			</div>
@@ -530,7 +595,8 @@ keyframes slide { 0% {
 					<div class="panel-footer">
 						<h3>R$29,99</h3>
 						<h4>por mês</h4>
-						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp" class="btn btn-lg">Inscrever-se</a>
+						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp"
+							class="btn btn-lg">Inscrever-se</a>
 					</div>
 				</div>
 			</div>
@@ -556,7 +622,8 @@ keyframes slide { 0% {
 					<div class="panel-footer">
 						<h3>R$49,99</h3>
 						<h4>por mês</h4>
-						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp" class="btn btn-lg">Inscrever-se</a>
+						<a href="<%=request.getContextPath()%>/cadastroUsuario.jsp"
+							class="btn btn-lg">Inscrever-se</a>
 					</div>
 				</div>
 			</div>

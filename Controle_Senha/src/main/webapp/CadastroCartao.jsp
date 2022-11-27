@@ -122,7 +122,7 @@
 											</div>
 
 											<div class="d-flex justify-content-center mx-2 mb-3 mb-lg-4">
-												<a href="<%=request.getContextPath()%>/PaginaPrincial.jsp"
+												<a href="<%=request.getContextPath()%>/consultaCartao.jsp"
 													class="btn btn-outline-danger" style="width: 136px;">Cancelar</a>
 											</div>
 										</div>

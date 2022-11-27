@@ -8,7 +8,7 @@ public class Login {
 	private Login() {}
 	
 	public static Usuario GetLogin(Usuario obj) {
-		if (usuario == null) {
+		if (usuario == null && obj != null) {
 			usuario = new Usuario();
 			
 			usuario.setId(obj.getId());

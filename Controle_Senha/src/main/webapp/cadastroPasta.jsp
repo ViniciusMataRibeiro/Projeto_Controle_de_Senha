@@ -262,7 +262,7 @@ keyframes slide { 0% {
 										<p style="margin-left: 22%;">
 											<button type="submit" class="btn btn-success"
 												style="width: 136px;"Salvar">Salvar</button>
-											<a href="<%=request.getContextPath()%>/PaginaPrincial.jsp"
+											<a href="<%=request.getContextPath()%>/consultaPasta.jsp"
 												class="btn btn-secondary my-2" style="width: 136px;">Cancelar</a>
 										</p>
 									</form>

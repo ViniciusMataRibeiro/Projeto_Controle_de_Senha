@@ -243,11 +243,8 @@ keyframes slide { 0% {
 							style="color: #fff; margin: 15px;">Consultar Serviços</a> <a
 							href="<%=request.getContextPath()%>/consultaCartao.jsp"
 							style="color: #fff; margin: 15px;">Consultar Cartões</a> <a
-							href="<%=request.getContextPath()%>/consultaPasta.jsp"
-							style="color: #fff; margin: 15px;">Consultar Pastas</a><a
 							style="color: #fff; margin: 15px;"
-							href="<%=request.getContextPath()%>/pagePrincipal.jsp"><span
-							class="glyphicon glyphicon-log-in"></span> Pagina principal</a>
+							href="<%=request.getContextPath()%>/pagePrincipal.jsp">Pagina principal</a>
 					</p>
 				</div>
 			</div>

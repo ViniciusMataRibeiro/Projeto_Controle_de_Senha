@@ -21,6 +21,14 @@ public class Servicos {
 	@JoinColumn(name = "pasta_id", nullable = false)
 	private Pasta pasta;
 
+	public Pasta getPasta() {
+		return pasta;
+	}
+
+	public void setPasta(Pasta pasta) {
+		this.pasta = pasta;
+	}
+
 	public long getId() {
 		return id;
 	}

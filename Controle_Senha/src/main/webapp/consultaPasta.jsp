@@ -239,7 +239,7 @@ keyframes slide { 0% {
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<p style="margin-left: 22%; margin-top: 1%;">
-						<a href="<%=request.getContextPath()%>/consultarServico.jsp"
+						<a href="<%=request.getContextPath()%>/consultaServico.jsp"
 							style="color: #fff; margin: 15px;">Consultar Serviços</a> <a
 							href="<%=request.getContextPath()%>/consultaCartao.jsp"
 							style="color: #fff; margin: 15px;">Consultar Cartões</a> <a
@@ -261,6 +261,7 @@ keyframes slide { 0% {
 										<tr>
 											<th>Usuário</th>
 											<th>Nome Pasta</th>
+											<th>Quantidade de Item</th>
 											<th style="text-align: center;">Ação</th>
 										</tr>
 										<a type="button" class="btn btn-outline-success"
@@ -269,6 +270,9 @@ keyframes slide { 0% {
 									<tbody>
 										<%
 										for (Pasta obj : listPasta) {
+											
+											int a = dao.BuscarQuant(obj.getId());
+										
 										%>
 										<tr>
 											<td>
@@ -285,6 +289,9 @@ keyframes slide { 0% {
 											</td>
 											<td>
 												<p class="fw-normal mb-1"><%=obj.getNome()%></p>
+											</td>
+											<td>
+												<p class="fw-normal mb-1"><%=a%> itens</p>
 											</td>
 											<td style="text-align: center"><a type="button"
 												class="btn btn-outline-info"

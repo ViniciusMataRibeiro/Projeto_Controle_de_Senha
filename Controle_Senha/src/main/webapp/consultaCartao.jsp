@@ -240,7 +240,7 @@ keyframes slide { 0% {
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<p style="margin-left: 22%; margin-top: 1%;">
-						<a href="<%=request.getContextPath()%>/consultarServico.jsp"
+						<a href="<%=request.getContextPath()%>/consultaServico.jsp"
 							style="color: #fff; margin: 15px;">Consultar Serviços</a><a
 							href="<%=request.getContextPath()%>/consultaPasta.jsp"
 							style="color: #fff; margin: 15px;">Consultar Pastas</a><a

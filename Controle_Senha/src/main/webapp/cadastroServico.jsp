@@ -84,7 +84,7 @@
 											</select>
 										</div>
 
-										<div class="btn-group" role="group" style="margin-left: 10%;">
+										<div class="btn-group" role="group">
 											<div class="d-flex justify-content-center mx-3 mb-3 mb-lg-4">
 												<button type="submit" class="btn btn-outline-success"
 													value="Salvar" style="width: 136px;">Salvar</button>

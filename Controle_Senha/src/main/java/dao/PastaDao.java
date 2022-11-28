@@ -17,10 +17,14 @@ public class PastaDao extends Dao<Pasta, Long> {
 	}
 
 	public int BuscarQuant(Long idpasta) {
+		
+		PastaDao dao = new PastaDao();
+		Pasta pasta = dao.findById(Pasta.class, idpasta).get();
+		
 		List<Cartao> employee = new ArrayList<>();
 		try {
-			TypedQuery<Cartao> query = em.createQuery("SELECT * FROM cartao c WHERE c.pasta_id = 1?", Cartao.class);
-			query.setParameter(1, 16);
+			TypedQuery<Cartao> query = em.createQuery("SELECT c FROM Cartao c WHERE c.pasta = ?1", Cartao.class);
+			query.setParameter(1, pasta);
 
 			employee = query.getResultList();
 		} catch (Exception e) {
@@ -31,8 +35,8 @@ public class PastaDao extends Dao<Pasta, Long> {
 
 		List<Servicos> employee2 = new ArrayList<>();
 		try {
-			TypedQuery<Servicos> query = em.createQuery("SELECT * FROM servicos WHERE pasta_id = 1?", Servicos.class);
-			query.setParameter(1, idpasta);
+			TypedQuery<Servicos> query = em.createQuery("SELECT s FROM Servicos s WHERE s.pasta = ?2", Servicos.class);
+			query.setParameter(2, pasta);
 
 			employee2 = query.getResultList();
 		} catch (Exception e) {

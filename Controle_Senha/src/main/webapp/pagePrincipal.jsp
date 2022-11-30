@@ -420,8 +420,8 @@ if (usuario != null) {
 					<%
 					if (log) {
 					%>
-					<a type="submit" href="cadastroServico"> <img
-						src="" alt="Modelo" width="400" height="300">
+					<a type="submit" href="<%=request.getContextPath()%>/cadastroServico.jsp"> <img
+						src="Fotos/PageCriarServico.png" alt="Modelo" width="400" height="300">
 					</a>
 					<%
 					} else {

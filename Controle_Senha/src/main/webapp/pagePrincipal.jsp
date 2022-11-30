@@ -332,7 +332,6 @@ if (usuario != null) {
 				<div id="demo2" class="collapse">
 					<br>
 					<p>Desenvolvedor Front e Back End</p>
-					<p>Ama um Vava</p>
 					<p>Aluno da Computação</p>
 				</div>
 			</div>
@@ -502,18 +501,18 @@ if (usuario != null) {
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
 					<h4>
-						"Esta empresa é a melhor. Estou muito feliz com o resultado!"<br>
+						"Eu tentei outros gerenciadores de senhas chamados "melhores" e sempre volto para o RibeiroKey, que funciona perfeitamente. Confiança total neste produto"<br>
 						<span>Michael Roe</span>
 					</h4>
 				</div>
 				<div class="item">
 					<h4>
-						"Uma palavra... UAU!!<br> <span>John</span>
+						"Produto excelente! Sou cliente há pouco tempo mas ja quero usar sempre. Eu o uso todos os dias e facilita o acesso a todas as minhas informações protegidas.<br> <span>John</span>
 					</h4>
 				</div>
 				<div class="item">
 					<h4>
-						"Eu poderia... FICAR mais feliz com esta empresa?"<br> <span>Chandler</span>
+						"Por muito tempo, confiei no RibeiroKey para ser meu "porteiro" para manter os "Bad Guys" afastados. Muito satisfeito e me sinto tão seguro quanto se pode esperar."<br> <span>Chandler</span>
 					</h4>
 				</div>
 			</div>

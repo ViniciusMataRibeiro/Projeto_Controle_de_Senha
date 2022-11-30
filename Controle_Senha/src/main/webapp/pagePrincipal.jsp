@@ -282,8 +282,8 @@ if (usuario != null) {
 					confiável por milhões.</h4>
 				<br>
 				<p>A maneira mais fácil e segura de gerenciar suas credenciais,
-					senhas, cartões de crédito e outros, sempre protegendo você e sua
-					família. Vá em frente, esqueça as senhas: a RibeiroKey cuidará de tudo para você.</p>
+					senhas, cartões de crédito e outros, permitindo uma boa organização, sempre protegendo você e sua
+					família. Não esquente mais com essas coisas, vá em frente, esqueça as senhas: a RibeiroKey cuidará de tudo para você aonde você estiver.</p>
 				<br> <br>
 			</div>
 			<div class="col-sm-2">
@@ -351,13 +351,16 @@ if (usuario != null) {
 				<br>
 				<h4>
 					<strong>MISSÃO:</strong> Nossa missão é permitir que nossos clientes 
-					tenham o poder de gerenciar suas senhas da forma mais segura e conveniente,
-					e tudo isso em um só lugar.
+					tenham o poder de gerenciar suas senhas da forma mais segura e conveniente, 
+					facilitar o acesso a seus serviços e 
+					organiza-los da forma que desejar, alem de manter seguro 
+					ate mesmo os seus cartões e tudo isso em um só lugar.
 				</h4>
 				<br>
 				<p>
 					<strong>VISÃO:</strong> Nossa visão, como uma empresa de gerenciamento de senhas,
 					é garantir a despreocupação do cliente em relação ao controle de suas senhas, 
+					permitir uma acessibilidade agil a seus serviços, mantendo-os em segurança e organizados
 					tornando o mundo online um lugar mais seguro. Todos merecem estar seguros online.
 				</p>
 			</div>

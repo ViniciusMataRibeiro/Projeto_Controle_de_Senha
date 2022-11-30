@@ -427,7 +427,7 @@ if (usuario != null) {
 					} else {
 					%>
 					<a type="submit" href="<%=request.getContextPath()%>/formLogin.jsp">
-						<img src="" alt="Modelo" width="400"
+						<img src="Fotos/PageCriarServico.png" alt="Modelo" width="400"
 						height="300">
 					</a>
 					<%
